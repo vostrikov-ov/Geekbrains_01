@@ -13,6 +13,7 @@ my_list_1 = [2, 2, 5, 12, 8, 2, 12]
 
 my_list_1 = [2, 2, 5, 12, 8, 2, 12]
 
+# Вариант 1
 numbers_dict = {}
 # Считаем количество элементов в исходном списке
 for num in my_list_1:
@@ -27,5 +28,16 @@ for num, count in numbers_dict.items():
     if count == 1:
         result_list.append(num)
 
+print('Вариант #1')
+print('Исходный список:', my_list_1, sep='\n')
+print('Уникальные элементы исходного списка:', result_list, sep='\n')
+
+# Вариант 2
+result_list = []
+for num in my_list_1:
+    if my_list_1.count(num) == 1:
+        result_list.append(num)
+
+print('Вариант #2')
 print('Исходный список:', my_list_1, sep='\n')
 print('Уникальные элементы исходного списка:', result_list, sep='\n')
